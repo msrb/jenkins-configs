@@ -90,7 +90,7 @@ cp -r %{_datadir}/maven/lib/* %{buildroot}%{_datadir}/%{name}/lib/
 
 # possibly recreate symlinks that can be automated with xmvn-subst
 %{name}-subst %{buildroot}%{_datadir}/%{name}/
-for jar in core connector;do
+for jar in core connector-aether connector-ivy;do
     ln -sf %{_javadir}/%{name}/%{name}-$jar.jar %{buildroot}%{_datadir}/%{name}/lib
 done
 
@@ -109,10 +109,10 @@ rm %{buildroot}%{_datadir}/%{name}/lib/google-guice-no_aop.jar
 build-jar-repository %{buildroot}%{_datadir}/%{name}/lib/ \
                      guice/google-guice-no_aop
 
-#if [[ `find %{buildroot}%{_datadir}/%{name}/lib -type f -name '*.jar' -not -name '*%{name}*' | wc -l` -ne 0 ]];then
-#    echo "Some jar files were not symlinked during build. Aborting"
-#    exit 1
-#fi
+if [[ `find %{buildroot}%{_datadir}/%{name}/lib -type f -name '*.jar' -not -name '*%{name}*' | wc -l` -ne 0 ]];then
+    echo "Some jar files were not symlinked during build. Aborting"
+    exit 1
+fi
 
 
 # /usr/bin/xmvn script
