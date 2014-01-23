@@ -36,6 +36,10 @@ This package provides %{summary}.
 %prep
 %setup -q
 
+# Compat alias required by Tycho
+# FIXME: remove this once Tycho is updated
+%mvn_alias :xmvn-connector-ivy :xmvn-connector
+
 # remove dependency plugin maven-binaries execution
 # we provide apache-maven by symlink
 %pom_xpath_remove "pom:executions/pom:execution[pom:id[text()='maven-binaries']]"
