@@ -18,6 +18,7 @@ BuildRequires:  maven-invoker-plugin
 BuildRequires:  xmlunit
 BuildRequires:  apache-ivy
 BuildRequires:  sisu-mojos
+BuildRequires:  junit
 
 Requires:       maven >= 3.1.0
 
@@ -55,7 +56,7 @@ ln -s %{_datadir}/maven target/dependency/apache-maven-$mver
 rm -rf src/it
 
 %build
-%mvn_build
+%mvn_build -X
 
 tar --delay-directory-restore -xvf target/*tar.bz2
 chmod -R +rwX %{name}-*
