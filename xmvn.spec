@@ -50,6 +50,9 @@ ln -s %{_datadir}/maven target/dependency/apache-maven-$mver
 # skip ITs for now (mix of old & new XMvn config causes issues
 rm -rf src/it
 
+# probably bug in configuration/modello?
+sed -i 's|generated-site/resources/xsd/config|generated-site/xsd/config|' xmvn-core/pom.xml
+
 %build
 %mvn_build -X
 
