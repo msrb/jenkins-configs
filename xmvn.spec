@@ -37,6 +37,9 @@ This package provides %{summary}.
 %prep
 %setup -q
 
+# In XMvn 1.x xmvn-connector was renamed to xmvn-connector-aether
+%mvn_alias :xmvn-connector-aether :xmvn-connector
+
 # remove dependency plugin maven-binaries execution
 # we provide apache-maven by symlink
 %pom_xpath_remove "pom:executions/pom:execution[pom:id[text()='maven-binaries']]"
@@ -151,4 +154,3 @@ end
 %changelog
 * Fri Feb 21 2014 Michal Srb <msrb@redhat.com> - 1.4.0-1
 - Spec for Jenkins builds
-
