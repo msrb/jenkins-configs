@@ -7,7 +7,7 @@ URL:            http://mizdebsk.fedorapeople.org/xmvn
 BuildArch:      noarch
 Source0:        %{name}-%{version}.tar.xz
 
-BuildRequires:  maven >= 3.1.1-13
+BuildRequires:  maven >= 3.2.1-3
 BuildRequires:  maven-local
 BuildRequires:  beust-jcommander
 BuildRequires:  cglib
@@ -20,7 +20,7 @@ BuildRequires:  apache-ivy
 BuildRequires:  sisu-mojos
 BuildRequires:  junit
 
-Requires:       maven >= 3.1.1-13
+Requires:       maven >= 3.2.1-3
 
 %description
 This package provides extensions for Apache Maven that can be used to
