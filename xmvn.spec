@@ -96,10 +96,6 @@ cp -r %{_datadir}/maven/lib/* %{buildroot}%{_datadir}/%{name}/lib/
 
 # possibly recreate symlinks that can be automated with xmvn-subst
 %{name}-subst %{buildroot}%{_datadir}/%{name}/
-#for jar in core connector;do
-for jar in core connector-aether connector-ivy; do
-    ln -sf %{_javadir}/%{name}/%{name}-$jar.jar %{buildroot}%{_datadir}/%{name}/lib
-done
 
 for tool in subst resolver bisect installer;do
     # sisu doesn't contain pom.properties. Manually replace with symlinks
