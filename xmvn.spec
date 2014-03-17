@@ -15,6 +15,7 @@ BuildRequires:  maven-dependency-plugin
 BuildRequires:  maven-plugin-build-helper
 BuildRequires:  maven-assembly-plugin
 BuildRequires:  maven-invoker-plugin
+BuildRequires:  modello
 BuildRequires:  xmlunit
 BuildRequires:  apache-ivy
 BuildRequires:  sisu-mojos
