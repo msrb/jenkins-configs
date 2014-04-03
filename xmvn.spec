@@ -58,7 +58,7 @@ rm -rf src/it
 sed -i 's|generated-site/resources/xsd/config|generated-site/xsd/config|' xmvn-core/pom.xml
 
 %build
-%mvn_build -X
+%mvn_build -f -X
 
 tar --delay-directory-restore -xvf target/*tar.bz2
 chmod -R +rwX %{name}-%{version}*
