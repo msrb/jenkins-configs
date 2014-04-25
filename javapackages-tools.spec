@@ -91,7 +91,7 @@ artifact resolution using XMvn resolver.
 
 %package -n python-javapackages
 Summary:        Module for handling various files for Java packaging
-Requires:  	    PyXB
+Requires:       PyXB
 Requires:       python-lxml
 
 %description -n python-javapackages
