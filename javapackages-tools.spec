@@ -10,7 +10,6 @@ Source0:        javapackages-%{version}.tar.xz
 
 BuildArch:      noarch
 
-BuildRequires:  jpackage-utils
 BuildRequires:  asciidoc
 BuildRequires:  xmlto
 BuildRequires:  python-lxml
