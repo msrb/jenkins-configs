@@ -6,7 +6,7 @@ resultdir="/var/lib/mock/javapackages-rawhide/result/"
 curl https://raw.githubusercontent.com/msrb/jenkins-configs/javapackages-tools/fedora-rawhide-x86_64.cfg > fedora-rawhide-x86_64.cfg
 touch -d '01 Jan 2000' fedora-rawhide-x86_64.cfg
 
-# download custom mock config
+# download spec file
 curl https://raw.githubusercontent.com/msrb/jenkins-configs/javapackages-tools/javapackages-tools.spec > javapackages-tools.spec
 
 # create directories
