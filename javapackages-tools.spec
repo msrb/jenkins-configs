@@ -30,6 +30,9 @@ Requires:       python-javapackages = %{version}-%{release}
 Provides:       jpackage-utils = %{version}-%{release}
 Obsoletes:      jpackage-utils < %{version}-%{release}
 
+Provides:       mvn(com.sun:tools)
+Provides:       mvn(sun.jdk:jconsole)
+
 %description
 This package provides macros and scripts to support Java packaging.
 
