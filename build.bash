@@ -3,7 +3,7 @@
 resultdir="/var/lib/mock/fedora-rawhide-x86_64/result"
 
 # download spec file
-curl https://raw.github.com/msrb/jenkins-configs/xmvn/xmvn.spec > xmvn.spec
+curl https://raw.githubusercontent.com/msrb/jenkins-configs/xmvn/xmvn.spec > xmvn.spec
 
 # create directories
 repo=RPM/latest/
