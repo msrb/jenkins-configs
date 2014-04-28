@@ -42,10 +42,10 @@ if [ -n "${last_bn}" ]; then
     mv ${repo}/* RPM/${last_bn}
 
     # we only want keep RPMs from last 10 builds
-    blist=`find ./RPM/ -name "[0-9]*"`
+    blist=`find ./RPM/ -maxdepth 1 -name "[0-9]*"`
     for bn in $blist; do
         if [ `basename $bn` -lt `expr $last_bn - 10` ]; then
-            rm -Rf RPM/$bn
+            rm -Rf $bn
         fi
     done
 fi
