@@ -16,7 +16,7 @@ sed -i "s/^Version:\s\+[0-9.]*$/Version: ${version}/" xmvn.spec
 sed -i "s/^Release:\s\+[0-9.]*%{?dist}$/Release: ${release}/" xmvn.spec
 
 # make tarball
-git archive -v --prefix=javapackages-${version}/ HEAD | xz > javapackages-${version}.tar.xz
+git archive -v --prefix=xmvn-${version}/ HEAD | xz > xmvn-${version}.tar.xz
 
 # print root.log and build.log in case of failure
 trap "cat ${resultdir}/root.log | tail -30; cat ${resultdir}/build.log || :" 0
